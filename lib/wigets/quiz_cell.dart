@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:koobits/model/quiz.dart';
 import 'package:provider/src/provider.dart';
 
+
 class QuizCell extends StatelessWidget {
    QuizCell({Key? key,required this.quiz,this.ans}) : super(key: key);
   Quiz quiz;
@@ -23,10 +24,10 @@ class QuizCell extends StatelessWidget {
             child: Text("Difficulty:${quiz.difficulty}"),
           )
             ]),
-        Spacer(),
+        const Spacer(),
 
         Row(children:[
-          Spacer(),
+          const Spacer(),
           Text("Question: ${quiz.question} = "),
           SizedBox(
               width: 100,
@@ -39,14 +40,14 @@ class QuizCell extends StatelessWidget {
 
                   ans= value;
                   quizProvider.unSubmitAnswer[quiz.id] = value;
-                  print(ans);
+
                 },
               )
           ),
-          Spacer()
+          const Spacer()
         ]),
 
-        Spacer(),
+        const Spacer(),
       ],
     );
   }

@@ -26,6 +26,7 @@ class _QuizScreenState extends State<QuizScreen> {
 
 
 
+  @override
   Widget build(BuildContext context) {
 
 
@@ -85,7 +86,7 @@ class _QuizScreenState extends State<QuizScreen> {
 
                   ]
               );
-                return   quizWidget[quizProvider.quizList[index].id]!;
+
           },
         ));
   }

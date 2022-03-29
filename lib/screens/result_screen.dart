@@ -7,12 +7,12 @@ class ResultScreen extends StatelessWidget {
   static String routeName = "/result";
   @override
   Widget build(BuildContext context) {
-    print(submitResult);
+
     String _answer = '';
     for (var i in submitResult['answer']){
       i.forEach((key,value){
 
-        _answer += "Question${key}:\nYour answer: ${value['examAnswer']??"None"}, Question's answer:${value['quizAnswer']}\n";
+        _answer += "Question$key:\nYour answer: ${value['examAnswer']??"None"}, Question's answer:${value['quizAnswer']}\n";
       });
     }
     return Scaffold(
